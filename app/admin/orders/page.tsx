@@ -56,7 +56,7 @@ export default function AdminOrdersPage() {
                 id: order.id.slice(0, 8).toUpperCase(), // Short ID
                 customer: order.profiles?.full_name || order.profiles?.email || "Guest",
                 items: order.order_items?.map((oi: any) => `${oi.quantity}x ${oi.menu_items?.name}`).join(", "),
-                total: `$${order.total_amount}`,
+                total: `KSh ${order.total_amount}`,
                 status: order.status,
                 time: new Date(order.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                 raw_status: order.status

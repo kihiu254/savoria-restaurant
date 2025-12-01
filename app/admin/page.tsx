@@ -3,7 +3,7 @@ import { DollarSign, ShoppingBag, Users, TrendingUp } from "lucide-react";
 const STATS = [
     {
         name: "Total Revenue",
-        value: "$45,231.89",
+        value: "KSh 4,523,189",
         change: "+20.1%",
         icon: DollarSign,
     },

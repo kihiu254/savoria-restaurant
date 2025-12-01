@@ -18,7 +18,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 1,
         name: "Caprese Salad",
         description: "Fresh mozzarella, heirloom tomatoes, basil, and aged balsamic reduction.",
-        price: "$16",
+        price: "KSh 1,600",
         image_url: "https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=800&q=80",
         category: "Starters"
     },
@@ -26,7 +26,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 2,
         name: "Lobster Bisque",
         description: "Rich and creamy soup with chunks of fresh lobster meat and a hint of sherry.",
-        price: "$18",
+        price: "KSh 1,800",
         image_url: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
         category: "Starters"
     },
@@ -34,7 +34,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 3,
         name: "Bruschetta Trio",
         description: "Three varieties: classic tomato basil, mushroom truffle, and roasted red pepper.",
-        price: "$14",
+        price: "KSh 1,400",
         image_url: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=800&q=80",
         category: "Starters"
     },
@@ -42,7 +42,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 4,
         name: "Tuna Tartare",
         description: "Fresh ahi tuna with avocado, cucumber, sesame, and soy-lime dressing.",
-        price: "$22",
+        price: "KSh 2,200",
         image_url: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
         category: "Starters"
     },
@@ -50,7 +50,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 5,
         name: "Calamari Fritti",
         description: "Crispy fried calamari with marinara sauce and lemon aioli.",
-        price: "$17",
+        price: "KSh 1,700",
         image_url: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80",
         category: "Starters"
     },
@@ -58,7 +58,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 6,
         name: "French Onion Soup",
         description: "Classic caramelized onion soup with gruyere cheese and crusty bread.",
-        price: "$15",
+        price: "KSh 1,500",
         image_url: "https://images.unsplash.com/photo-1631709497146-a92a0e07f6e7?w=800&q=80",
         category: "Starters"
     },
@@ -66,7 +66,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 7,
         name: "Caesar Salad",
         description: "Crisp romaine, parmesan, croutons, and house-made Caesar dressing.",
-        price: "$13",
+        price: "KSh 1,300",
         image_url: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=800&q=80",
         category: "Starters"
     },
@@ -74,7 +74,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 8,
         name: "Charcuterie Board",
         description: "Selection of artisan cured meats, cheeses, olives, and preserves.",
-        price: "$26",
+        price: "KSh 2,600",
         image_url: "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=800&q=80",
         category: "Starters"
     },
@@ -84,7 +84,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 9,
         name: "Truffle Mushroom Risotto",
         description: "Creamy arborio rice with wild mushrooms and black truffle oil, finished with aged parmesan.",
-        price: "$24",
+        price: "KSh 2,400",
         image_url: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&q=80",
         category: "Mains"
     },
@@ -92,7 +92,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 10,
         name: "Pan-Seared Scallops",
         description: "Jumbo scallops with cauliflower purée, crispy prosciutto, and lemon butter sauce.",
-        price: "$32",
+        price: "KSh 3,200",
         image_url: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=800&q=80",
         category: "Mains"
     },
@@ -100,7 +100,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 11,
         name: "Wagyu Beef Burger",
         description: "Premium wagyu beef, caramelized onions, aged cheddar, and truffle mayo on brioche bun.",
-        price: "$28",
+        price: "KSh 2,800",
         image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80",
         category: "Mains"
     },
@@ -108,7 +108,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 12,
         name: "Grilled Salmon",
         description: "Atlantic salmon with herb butter, roasted vegetables, and lemon couscous.",
-        price: "$29",
+        price: "KSh 2,900",
         image_url: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80",
         category: "Mains"
     },
@@ -116,7 +116,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 13,
         name: "Filet Mignon",
         description: "8oz center-cut filet with truffle mashed potatoes and red wine reduction.",
-        price: "$42",
+        price: "KSh 4,200",
         image_url: "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80",
         category: "Mains"
     },
@@ -124,7 +124,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 14,
         name: "Chicken Marsala",
         description: "Pan-seared chicken breast with marsala wine sauce, mushrooms, and garlic mashed potatoes.",
-        price: "$26",
+        price: "KSh 2,600",
         image_url: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&q=80",
         category: "Mains"
     },
@@ -132,7 +132,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 15,
         name: "Herb-Crusted Lamb Chops",
         description: "New Zealand lamb chops with rosemary, mint chimichurri, and roasted vegetables.",
-        price: "$38",
+        price: "KSh 3,800",
         image_url: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80",
         category: "Mains"
     },
@@ -140,7 +140,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 16,
         name: "Seafood Paella",
         description: "Traditional Spanish rice with shrimp, mussels, calamari, and saffron.",
-        price: "$34",
+        price: "KSh 3,400",
         image_url: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800&q=80",
         category: "Mains"
     },
@@ -148,7 +148,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 17,
         name: "Duck Confit",
         description: "Slow-cooked duck leg with orange glaze, wild rice, and roasted Brussels sprouts.",
-        price: "$36",
+        price: "KSh 3,600",
         image_url: "https://images.unsplash.com/photo-1635321593217-40050ad13c74?w=800&q=80",
         category: "Mains"
     },
@@ -156,7 +156,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 18,
         name: "Vegetarian Lasagna",
         description: "Layers of pasta, roasted vegetables, ricotta, and marinara sauce.",
-        price: "$22",
+        price: "KSh 2,200",
         image_url: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80",
         category: "Mains"
     },
@@ -166,7 +166,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 19,
         name: "Chocolate Lava Cake",
         description: "Warm chocolate cake with molten center, served with vanilla bean ice cream.",
-        price: "$12",
+        price: "KSh 1,200",
         image_url: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800&q=80",
         category: "Desserts"
     },
@@ -174,7 +174,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 20,
         name: "Tiramisu",
         description: "Classic Italian dessert with espresso-soaked ladyfingers and mascarpone cream.",
-        price: "$11",
+        price: "KSh 1,100",
         image_url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80",
         category: "Desserts"
     },
@@ -182,7 +182,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 21,
         name: "Crème Brûlée",
         description: "Vanilla custard with caramelized sugar crust and fresh berries.",
-        price: "$10",
+        price: "KSh 1,000",
         image_url: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=800&q=80",
         category: "Desserts"
     },
@@ -190,7 +190,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 22,
         name: "New York Cheesecake",
         description: "Rich and creamy cheesecake with graham cracker crust and berry compote.",
-        price: "$11",
+        price: "KSh 1,100",
         image_url: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&q=80",
         category: "Desserts"
     },
@@ -198,7 +198,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 23,
         name: "Panna Cotta",
         description: "Silky Italian custard with raspberry coulis and mint.",
-        price: "$9",
+        price: "KSh 900",
         image_url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80",
         category: "Desserts"
     },
@@ -206,7 +206,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 24,
         name: "Apple Tart",
         description: "Warm apple tart with cinnamon, served with vanilla ice cream.",
-        price: "$10",
+        price: "KSh 1,000",
         image_url: "https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=800&q=80",
         category: "Desserts"
     },
@@ -214,7 +214,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 25,
         name: "Gelato Trio",
         description: "Three scoops of artisan gelato: pistachio, stracciatella, and salted caramel.",
-        price: "$8",
+        price: "KSh 800",
         image_url: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
         category: "Desserts"
     },
@@ -224,7 +224,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 26,
         name: "Signature Cocktail",
         description: "House special blend of premium spirits with fresh herbs and citrus.",
-        price: "$15",
+        price: "KSh 1,500",
         image_url: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80",
         category: "Drinks"
     },
@@ -232,7 +232,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 27,
         name: "Classic Mojito",
         description: "White rum, fresh mint, lime, sugar, and soda water.",
-        price: "$13",
+        price: "KSh 1,300",
         image_url: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80",
         category: "Drinks"
     },
@@ -240,7 +240,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 28,
         name: "Old Fashioned",
         description: "Bourbon, bitters, orange peel, and a sugar cube.",
-        price: "$14",
+        price: "KSh 1,400",
         image_url: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
         category: "Drinks"
     },
@@ -248,7 +248,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 29,
         name: "Espresso Martini",
         description: "Vodka, coffee liqueur, and fresh espresso with a frothy top.",
-        price: "$15",
+        price: "KSh 1,500",
         image_url: "https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=800&q=80",
         category: "Drinks"
     },
@@ -256,7 +256,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 30,
         name: "House Red Wine",
         description: "Curated selection of full-bodied red wine, perfect with any meal.",
-        price: "$12",
+        price: "KSh 1,200",
         image_url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80",
         category: "Drinks"
     },
@@ -264,7 +264,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 31,
         name: "House White Wine",
         description: "Crisp and refreshing white wine, ideal for seafood and light dishes.",
-        price: "$12",
+        price: "KSh 1,200",
         image_url: "https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80",
         category: "Drinks"
     },
@@ -272,7 +272,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 32,
         name: "Sparkling Water",
         description: "Premium Italian sparkling mineral water with lemon.",
-        price: "$5",
+        price: "KSh 500",
         image_url: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&q=80",
         category: "Drinks"
     },
@@ -280,7 +280,7 @@ const FALLBACK_MENU_ITEMS = [
         id: 33,
         name: "Fresh Lemonade",
         description: "House-made lemonade with fresh lemons and a hint of mint.",
-        price: "$6",
+        price: "KSh 600",
         image_url: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=800&q=80",
         category: "Drinks"
     }
@@ -316,7 +316,7 @@ export function MenuGrid() {
                 const formattedItems = data?.map(item => ({
                     ...item,
                     category: item.categories?.name || 'Uncategorized',
-                    price: `$${item.price}`
+                    price: `KSh ${item.price}`
                 })) || [];
 
                 setMenuItems(formattedItems.length > 0 ? formattedItems : FALLBACK_MENU_ITEMS);

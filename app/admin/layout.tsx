@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LayoutDashboard, UtensilsCrossed, ShoppingBag, LogOut, Settings } from "lucide-react";
+import { LayoutDashboard, UtensilsCrossed, ShoppingBag, LogOut, Settings, Calendar } from "lucide-react";
 
 export default function AdminLayout({
     children,
@@ -38,6 +38,13 @@ export default function AdminLayout({
                     >
                         <ShoppingBag className="h-5 w-5" />
                         Orders
+                    </Link>
+                    <Link
+                        href="/admin/reservations"
+                        className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-white/70 hover:bg-white/10 hover:text-fuchsia-dream transition-colors"
+                    >
+                        <Calendar className="h-5 w-5" />
+                        Reservations
                     </Link>
                     <Link
                         href="/admin/settings"

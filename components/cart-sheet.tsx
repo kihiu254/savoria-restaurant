@@ -26,6 +26,24 @@ export function CartSheet() {
     notes: ""
   });
 
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const checkUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      setUser(user);
+      if (user) {
+        setCustomerData(prev => ({
+          ...prev,
+          firstName: user.user_metadata?.full_name?.split(' ')[0] || "",
+          lastName: user.user_metadata?.full_name?.split(' ').slice(1).join(' ') || "",
+          email: user.email || ""
+        }));
+      }
+    };
+    checkUser();
+  }, []);
+
   useEffect(() => {
     setIsMounted(true);
     if (typeof window !== 'undefined' && !document.getElementById('paystack-script')) {
@@ -69,7 +87,7 @@ export function CartSheet() {
           menu_item_id: item.id,
           item_name: item.name,
           quantity: item.quantity,
-          price: parseFloat(item.price.replace('$', ''))
+          price: parseFloat(item.price.replace(/[^0-9.]/g, ''))
         }));
 
         await supabase.from('order_items').insert(orderItems);
@@ -102,7 +120,7 @@ export function CartSheet() {
         const handler = PaystackPop.setup({
           key: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "pk_test_xxxxx",
           email: customerData.email,
-          amount: Math.round(totalPrice() * 100),
+          amount: Math.round(totalPrice() * 100), // Amount in kobo/cents
           currency: "KES",
           ref: `SAV-${Date.now()}`,
           metadata: {
@@ -195,12 +213,12 @@ export function CartSheet() {
                   {items.map((item) => (
                     <div key={item.id} className="flex justify-between text-sm mb-2">
                       <span className="text-white/70">{item.name} x {item.quantity}</span>
-                      <span className="text-white">${(parseFloat(item.price.replace('$', '')) * item.quantity).toFixed(2)}</span>
+                      <span className="text-white">KSh {(parseFloat(item.price.replace(/[^0-9.]/g, '')) * item.quantity).toLocaleString()}</span>
                     </div>
                   ))}
                   <div className="border-t border-white/10 pt-2 mt-2 flex justify-between font-semibold">
                     <span className="text-white">Total</span>
-                    <span className="text-fuchsia-dream">${totalPrice().toFixed(2)}</span>
+                    <span className="text-fuchsia-dream">KSh {totalPrice().toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -250,20 +268,35 @@ export function CartSheet() {
             <div className="space-y-4 border-t border-white/10 pt-6">
               <div className="flex justify-between text-lg font-bold text-white">
                 <span>Total</span>
-                <span>${totalPrice().toFixed(2)}</span>
+                <span>KSh {totalPrice().toLocaleString()}</span>
               </div>
-              <Button
-                className="w-full rounded-xl bg-fuchsia-dream py-6 text-lg font-bold text-white hover:bg-fuchsia-dream/90"
-                onClick={() => {
-                  if (isCheckingOut) {
-                    handleCheckout();
-                  } else {
-                    setIsCheckingOut(true);
-                  }
-                }}
-              >
-                {isCheckingOut ? "Pay with Paystack" : "Proceed to Checkout"}
-              </Button>
+
+              {user ? (
+                <Button
+                  className="w-full rounded-xl bg-fuchsia-dream py-6 text-lg font-bold text-white hover:bg-fuchsia-dream/90"
+                  onClick={() => {
+                    if (isCheckingOut) {
+                      handleCheckout();
+                    } else {
+                      setIsCheckingOut(true);
+                    }
+                  }}
+                >
+                  {isCheckingOut ? "Pay with Paystack" : "Proceed to Checkout"}
+                </Button>
+              ) : (
+                <div className="space-y-3">
+                  <Button
+                    className="w-full rounded-xl bg-fuchsia-dream py-6 text-lg font-bold text-white hover:bg-fuchsia-dream/90"
+                    onClick={() => window.location.href = '/login?returnUrl=/menu'}
+                  >
+                    Log In to Checkout
+                  </Button>
+                  <p className="text-center text-xs text-white/40">
+                    You must be logged in to place an order.
+                  </p>
+                </div>
+              )}
             </div>
           )}
         </div>
