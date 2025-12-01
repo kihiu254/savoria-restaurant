@@ -130,12 +130,12 @@ export default function AdminOrdersPage() {
                                 <tr>
                                     <td colSpan={7} className="px-4 py-8 text-center text-white/40">Loading orders...</td>
                                 </tr>
-                            ) : filteredItems.length === 0 ? (
+                            ) : filteredOrders.length === 0 ? (
                                 <tr>
                                     <td colSpan={7} className="px-4 py-8 text-center text-white/40">No orders found.</td>
                                 </tr>
                             ) : (
-                                filteredItems.map((order) => (
+                                filteredOrders.map((order) => (
                                     <tr key={order.id} className="hover:bg-white/5 transition-colors">
                                         <td className="px-4 py-4 font-medium text-white">{order.id}</td>
                                         <td className="px-4 py-4">{order.customer}</td>
